@@ -2,10 +2,12 @@ package com.example.finalproject1;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
 
 import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -44,6 +46,11 @@ public class LoginActivity extends AppCompatActivity {
         }
         else{
             // note: will finish this later
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            View dialogView = findViewById(R.id.layout_dialog);
+            builder.setView(dialogView);
+            AlertDialog dialog = builder.create();
+            dialog.show();
         }
     }
 }
