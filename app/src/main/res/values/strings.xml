@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">Finalproject1</string>
+    <string name="home">Home</string>
+    <string name="order_updates">Order Update</string>
+    <string name="estimated_time_of_delivery">Estimated time of delivery</string>
+    <string name="_10_15_am">10:15am</string>
+    <string name="thank_you_for_ordering_nwe_ve_received_your_order_and_we_re_on_it">Thank you for ordering. we\'ve received your order and we\'re on it.</string>
+    <string name="order_update">Order Updates</string>
+    <string name="order_being_prepared">Order being prepared</string>
+    <string name="out_for_delivery">Out for delivery</string>
+    <string name="delivered_to_classroom">Delivered to Classroom.</string>
+    <string name="order_details">Order Details</string>
+    <string name="room_312_south_campus">Room 312 South campus</string>
+    <string name="please_message_once_you_re_outside_room_312_will_come_out_and_collect_nthank_you">Please message once you\'re outside room 312 will come out and collect. Thank you.</string>
+
 </resources>
