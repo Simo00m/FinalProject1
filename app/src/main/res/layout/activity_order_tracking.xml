@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <TextView
+        android:id="@+id/orderId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Order ID: #12345"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="12dp"/>
+
+    <ProgressBar
+        android:id="@+id/orderProgress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:max="100"
+        android:progress="25"
+        android:progressTint="@android:color/holo_green_dark"/>
+
+    <TextView
+        android:id="@+id/orderStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status: Preparing"
+        android:textSize="16sp"
+        android:layout_marginTop="12dp"/>
+
+    <TextView
+        android:id="@+id/estimatedTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Estimated delivery in 12 minutes"
+        android:textSize="14sp"
+        android:layout_marginTop="6dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/orderSummaryLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Order Summary:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/orderSummary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1x Burger, 1x Fries, 1x Coke"
+        android:textSize="14sp"
+        android:layout_marginTop="6dp"/>
+
+</LinearLayout>
