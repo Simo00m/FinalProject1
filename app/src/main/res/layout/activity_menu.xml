@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F9F9F9">
+
+    <!-- Top Banner -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Today Special Offer!!!\nBuy 1 Get 1 Free"
+        android:textAlignment="center"
+        android:padding="20dp"
+        android:background="#FFE4F2"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:textSize="18sp"/>
+
+
+    <!-- Category Buttons -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <Button android:text="All" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <Button android:text="Combos" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <Button android:text="Pizza" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <Button android:text="Burger" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- Scrollable List of Food Items -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <!-- Food item -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:orientation="horizontal"
+                android:background="@drawable/rounded_container"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_vertical">
+
+
+                <ImageView
+                    android:layout_width="180dp"
+                    android:layout_height="150dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/chicken_burger"
+                    android:background="@drawable/rounded_image"
+                    android:clipToOutline="true"
+                    android:scaleType="centerCrop"/>
+
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="Chicken Burger"
+                        android:textStyle="bold"
+                        android:textSize="25sp"
+                        android:layout_width="170dp"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="none" />
+
+                    <TextView
+                        android:text="Chicken Burger is delicious"
+                        android:textSize="17sp"
+                        android:layout_width="180dp"
+                        android:padding="5dp"
+                        android:layout_height="wrap_content"
+                        android:singleLine="false"
+                        android:ellipsize="none" />
+
+                    <TextView
+                        android:text="Price: $15.00"
+                        android:textStyle="bold"
+                        android:layout_width="270dp"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <!-- Jollof Food item -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:orientation="horizontal"
+                android:background="@drawable/rounded_container"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_vertical">
+
+
+                <ImageView
+                    android:layout_width="180dp"
+                    android:layout_height="150dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/jollof"
+                    android:background="@drawable/rounded_image"
+                    android:clipToOutline="true"
+                    android:scaleType="centerCrop"/>
+
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="Jollof Rice"
+                        android:textStyle="bold"
+                        android:textSize="25sp"
+                        android:layout_width="170dp"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="none" />
+
+                    <TextView
+                        android:text="A very delicious rice meal"
+                        android:textSize="17sp"
+                        android:layout_width="180dp"
+                        android:padding="5dp"
+                        android:layout_height="wrap_content"
+                        android:singleLine="false"
+                        android:ellipsize="none" />
+
+                    <TextView
+                        android:text="Price: $25.00"
+                        android:textStyle="bold"
+                        android:layout_width="270dp"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- doughnut -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:orientation="horizontal"
+                android:background="@drawable/rounded_container"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_vertical">
+
+
+                <ImageView
+                    android:layout_width="180dp"
+                    android:layout_height="150dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/doughnut"
+                    android:background="@drawable/rounded_image"
+                    android:clipToOutline="true"
+                    android:scaleType="centerCrop"/>
+
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="Lubed Doughnut"
+                        android:textStyle="bold"
+                        android:textSize="25sp"
+                        android:layout_width="170dp"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="none" />
+
+                    <TextView
+                        android:text="Very Yummy"
+                        android:textSize="17sp"
+                        android:layout_width="180dp"
+                        android:padding="5dp"
+                        android:layout_height="wrap_content"
+                        android:singleLine="false"
+                        android:ellipsize="none" />
+
+                    <TextView
+                        android:text="Price: $10.00"
+                        android:textStyle="bold"
+                        android:layout_width="270dp"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <!-- bryani -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:orientation="horizontal"
+                android:background="@drawable/rounded_container"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_vertical">
+
+
+                <ImageView
+                    android:layout_width="180dp"
+                    android:layout_height="150dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/bryani"
+                    android:background="@drawable/rounded_image"
+                    android:clipToOutline="true"
+                    android:scaleType="centerCrop"/>
+
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="Biryani"
+                        android:textStyle="bold"
+                        android:textSize="25sp"
+                        android:layout_width="170dp"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="none" />
+
+                    <TextView
+                        android:text="A taste of india on Campus"
+                        android:textSize="17sp"
+                        android:layout_width="180dp"
+                        android:padding="5dp"
+                        android:layout_height="wrap_content"
+                        android:singleLine="false"
+                        android:ellipsize="none" />
+
+                    <TextView
+                        android:text="Price: $15.00"
+                        android:textStyle="bold"
+                        android:layout_width="270dp"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0C0C76"
+        app:itemIconSize="40dp"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="#F2F0F0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+
+<!--    &lt;!&ndash; Bottom Navigation &ndash;&gt;-->
+<!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
+<!--        android:id="@+id/bottomNav"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="#001F5B"-->
+<!--        app:menu="@menu/bottom_menu"-->
+<!--        app:labelVisibilityMode="labeled"-->
+<!--        app:itemIconTint="@color/white"-->
+<!--        app:itemTextColor="@color/white"/>-->
+</LinearLayout>
