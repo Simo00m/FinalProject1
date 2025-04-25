@@ -8,6 +8,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -43,8 +45,8 @@ public class LoginActivity extends AppCompatActivity {
         TextView error = findViewById(R.id.txtView_loginError);
 
         if(email.equals(approvedEmail) && password.equals(approvedPassword)){
-            //Intent intent = new Intent(this, HomePage.class);
-            //activityResultLauncher.launch(intent);
+            Intent intent = new Intent(LoginActivity.this, MenuActivity.class);
+            startActivity(intent);
         }
         else{
             error.setVisibility(View.VISIBLE);
