@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,18 +8,14 @@
     android:padding="1dp"
     tools:context=".MainActivity">
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#0C0C76"
-        app:itemIconSize="40dp"
-        app:itemIconTint="@color/white"
-        app:itemTextColor="#F2F0F0"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/bottom_nav_menu" />
+        app:layout_constraintEnd_toEndOf="parent">
 
     <LinearLayout
         android:layout_width="0dp"
@@ -63,7 +60,7 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="12dp"
             android:backgroundTint="#DCE1F6"
             app:cardCornerRadius="10dp"
             app:cardElevation="4dp">
@@ -106,8 +103,8 @@
         <!-- Order Update Card -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_height="184dp"
+            android:layout_marginTop="12dp"
             android:backgroundTint="#DCE1F6"
             android:padding="12dp"
             app:cardCornerRadius="10dp"
@@ -129,6 +126,7 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/status_preparing"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
@@ -136,6 +134,7 @@
                     android:text="@string/order_being_prepared" />
 
                 <TextView
+                    android:id="@+id/status_out_for_delivery"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
@@ -143,6 +142,7 @@
                     android:text="@string/out_for_delivery" />
 
                 <TextView
+                    android:id="@+id/status_delivered"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
@@ -155,7 +155,7 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="12dp"
             android:backgroundTint="#DCE1F6"
             android:padding="12dp"
             app:cardCornerRadius="10dp"
@@ -189,8 +189,32 @@
                     android:layout_marginTop="4dp"
                     android:padding="5dp"
                     android:text="@string/please_message_once_you_re_outside_room_312_will_come_out_and_collect_nthank_you" />
+
+                <Button
+                    android:id="@+id/btnUpdateStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:layout_marginTop="16dp"
+                    android:backgroundTint="#0C0C76"
+                    android:text="@string/update_order_status"
+                    android:textColor="@android:color/white" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
     </LinearLayout>
+        </ScrollView>
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottomNavigationView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#0C0C76"
+                app:itemIconSize="40dp"
+                app:itemIconTint="@color/white"
+                app:itemTextColor="#F2F0F0"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:menu="@menu/bottom_nav_menu" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,5 +12,7 @@
     <string name="order_details">Order Details</string>
     <string name="room_312_south_campus">Room 312 South campus</string>
     <string name="please_message_once_you_re_outside_room_312_will_come_out_and_collect_nthank_you">Please message once you\'re outside room 312 will come out and collect. Thank you.</string>
+    <string name="update_order_status">Update Order Status</string>
+    <string name="email">E-mail</string>
 
 </resources>
