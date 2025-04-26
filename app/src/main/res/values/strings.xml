@@ -15,4 +15,9 @@
     <string name="update_order_status">Update Order Status</string>
     <string name="email">E-mail</string>
 
+    <string name="desc_background">Bow Valley College campus</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login_error">Email or password is incorrect</string>
+
 </resources>

@@ -5,8 +5,11 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -39,18 +42,14 @@ public class LoginActivity extends AppCompatActivity {
     public void login(View view){
         String email = emailInput.getText().toString();
         String password = passwordInput.getText().toString();
+        TextView error = findViewById(R.id.txtView_loginError);
 
         if(email.equals(approvedEmail) && password.equals(approvedPassword)){
-            //Intent intent = new Intent(this, HomePage.class);
-            //activityResultLauncher.launch(intent);
+            Intent intent = new Intent(LoginActivity.this, MenuActivity.class);
+            startActivity(intent);
         }
         else{
-            // note: will finish this later
-            AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            View dialogView = findViewById(R.id.layout_dialog);
-            builder.setView(dialogView);
-            AlertDialog dialog = builder.create();
-            dialog.show();
+            error.setVisibility(View.VISIBLE);
         }
     }
 }
