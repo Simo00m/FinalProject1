@@ -6,6 +6,9 @@ import android.widget.Button;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Handler;
+import android.content.Intent;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
 public class OrderUpdateActivity extends AppCompatActivity {
@@ -22,6 +25,21 @@ public class OrderUpdateActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_orderupdate);
+
+        //This was added by Lekan
+
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
+
+        bottomNavigationView.setOnItemSelectedListener(item -> {
+            if (item.getItemId() == R.id.home) {
+                Intent intent = new Intent(OrderUpdateActivity.this, MenuActivity.class);
+                startActivity(intent);
+                finish();
+                return true;
+            }
+            return false;
+        });
+        //till here
 
         deliveryTimeText = findViewById(R.id.delivery_time);
         statusPreparing = findViewById(R.id.status_preparing);

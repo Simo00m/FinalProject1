@@ -25,19 +25,43 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dp">
+
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
-            <Button android:text="All" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-            <Button android:text="Combos" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-            <Button android:text="Pizza" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-            <Button android:text="Burger" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/allButton"
+                android:text="All"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/burgerButton"
+                android:text="Burger"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/riceButton"
+                android:text="Rice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/doughnutButton"
+                android:text="Doughnut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
         </LinearLayout>
     </HorizontalScrollView>
 
+
     <!-- Scrollable List of Food Items -->
     <ScrollView
+        android:id="@+id/menuScrollView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
@@ -50,7 +74,7 @@
             <!-- Food item -->
             <!-- Chicken Burger Item -->
 
-            <!-- Jollof Rice Item -->
+
             <LinearLayout
                 android:id="@+id/chickenBurgerItem"
                 android:layout_width="match_parent"
@@ -279,14 +303,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/bottom_nav_menu" />
 
-<!--    &lt;!&ndash; Bottom Navigation &ndash;&gt;-->
-<!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
-<!--        android:id="@+id/bottomNav"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:background="#001F5B"-->
-<!--        app:menu="@menu/bottom_menu"-->
-<!--        app:labelVisibilityMode="labeled"-->
-<!--        app:itemIconTint="@color/white"-->
-<!--        app:itemTextColor="@color/white"/>-->
 </LinearLayout>
