@@ -48,71 +48,73 @@
             android:padding="10dp">
 
             <!-- Food item -->
+            <!-- Chicken Burger Item -->
+
+            <!-- Jollof Rice Item -->
             <LinearLayout
+                android:id="@+id/chickenBurgerItem"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="20dp"
-                android:orientation="horizontal"
-                android:background="@drawable/rounded_container"
                 android:layout_marginBottom="10dp"
-                android:gravity="center_vertical">
-
+                android:background="@drawable/rounded_container"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="20dp">
 
                 <ImageView
                     android:layout_width="180dp"
                     android:layout_height="150dp"
                     android:layout_marginEnd="10dp"
-                    android:src="@drawable/chicken_burger"
                     android:background="@drawable/rounded_image"
                     android:clipToOutline="true"
-                    android:scaleType="centerCrop"/>
-
-
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/chicken_burger" />
 
                 <LinearLayout
-                    android:orientation="vertical"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
                     <TextView
-                        android:text="Chicken Burger"
-                        android:textStyle="bold"
-                        android:textSize="25sp"
                         android:layout_width="170dp"
                         android:layout_height="wrap_content"
-                        android:ellipsize="none" />
+                        android:ellipsize="none"
+                        android:text="Chicken Burger"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
 
                     <TextView
-                        android:text="Chicken Burger is delicious"
-                        android:textSize="17sp"
                         android:layout_width="180dp"
-                        android:padding="5dp"
                         android:layout_height="wrap_content"
+                        android:ellipsize="none"
+                        android:padding="5dp"
                         android:singleLine="false"
-                        android:ellipsize="none" />
+                        android:text="Chicken Burger is delicious"
+                        android:textSize="17sp" />
 
                     <TextView
-                        android:text="Price: $15.00"
-                        android:textStyle="bold"
                         android:layout_width="270dp"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:text="Price: $15.00"
+                        android:textStyle="bold" />
                 </LinearLayout>
-
-
-
             </LinearLayout>
 
-            <!-- Jolly of Food item -->
-
             <LinearLayout
+                android:id="@+id/jollofItem"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="20dp"
                 android:orientation="horizontal"
                 android:background="@drawable/rounded_container"
                 android:layout_marginBottom="10dp"
-                android:gravity="center_vertical">
-
+                android:gravity="center_vertical"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground">
 
                 <ImageView
                     android:layout_width="180dp"
@@ -122,8 +124,6 @@
                     android:background="@drawable/rounded_image"
                     android:clipToOutline="true"
                     android:scaleType="centerCrop"/>
-
-
 
                 <LinearLayout
                     android:orientation="vertical"
@@ -153,19 +153,21 @@
                         android:layout_width="270dp"
                         android:layout_height="wrap_content"/>
                 </LinearLayout>
-
             </LinearLayout>
 
-            <!-- doughnut -->
+            <!-- Doughnut Item -->
             <LinearLayout
+                android:id="@+id/doughnutItem"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="20dp"
                 android:orientation="horizontal"
                 android:background="@drawable/rounded_container"
                 android:layout_marginBottom="10dp"
-                android:gravity="center_vertical">
-
+                android:gravity="center_vertical"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground">
 
                 <ImageView
                     android:layout_width="180dp"
@@ -175,8 +177,6 @@
                     android:background="@drawable/rounded_image"
                     android:clipToOutline="true"
                     android:scaleType="centerCrop"/>
-
-
 
                 <LinearLayout
                     android:orientation="vertical"
@@ -206,21 +206,21 @@
                         android:layout_width="270dp"
                         android:layout_height="wrap_content"/>
                 </LinearLayout>
-
-
-
             </LinearLayout>
 
-            <!-- bryani -->
+            <!-- Bryani Item -->
             <LinearLayout
+                android:id="@+id/biryaniItem"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="20dp"
                 android:orientation="horizontal"
                 android:background="@drawable/rounded_container"
                 android:layout_marginBottom="10dp"
-                android:gravity="center_vertical">
-
+                android:gravity="center_vertical"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground">
 
                 <ImageView
                     android:layout_width="180dp"
@@ -230,8 +230,6 @@
                     android:background="@drawable/rounded_image"
                     android:clipToOutline="true"
                     android:scaleType="centerCrop"/>
-
-
 
                 <LinearLayout
                     android:orientation="vertical"
@@ -261,10 +259,8 @@
                         android:layout_width="270dp"
                         android:layout_height="wrap_content"/>
                 </LinearLayout>
-
-
-
             </LinearLayout>
+
 
 
         </LinearLayout>
