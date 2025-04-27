@@ -5,9 +5,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="1dp"
-    tools:context=".MainActivity">
+    android:padding="1dp">
 
+    <!-- Scrollable Content -->
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -17,204 +17,188 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:orientation="vertical"
-        android:padding="2dp"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <!-- Title Bar -->
-        <androidx.cardview.widget.CardView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            app:cardCornerRadius="10dp"
-            app:cardElevation="4dp">
+            android:orientation="vertical">
 
-            <LinearLayout
+            <!-- Title Bar -->
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="2dp">
+                android:layout_marginTop="16dp"
+                android:padding="2dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="4dp">
 
                 <TextView
                     android:id="@+id/title"
                     android:layout_width="match_parent"
                     android:layout_height="80dp"
-                    android:background="#0C0C76"
                     android:gravity="center"
-                    android:padding="2dp"
+                    android:background="#0C0C76"
                     android:text="@string/order_updates"
                     android:textColor="#F4EEEE"
                     android:textSize="24sp"
                     android:textStyle="bold"
-                    app:itemTextColor="#F2F0F0" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
+                    android:padding="1dp"/>
+            </androidx.cardview.widget.CardView>
 
-        <!-- Estimated Time Card -->
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:backgroundTint="#DCE1F6"
-            app:cardCornerRadius="10dp"
-            app:cardElevation="4dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="16dp"
-                android:orientation="vertical"
-                android:padding="12dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="5dp"
-                    android:text="@string/estimated_time_of_delivery"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/delivery_time"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:padding="3dp"
-                    android:text="@string/_10_15_am"
-                    android:textColor="#666"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="49dp"
-                    android:layout_marginTop="8dp"
-                    android:padding="5dp"
-                    android:text="@string/thank_you_for_ordering_nwe_ve_received_your_order_and_we_re_on_it" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <!-- Order Update Card -->
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="184dp"
-            android:layout_marginTop="12dp"
-            android:backgroundTint="#DCE1F6"
-            android:padding="12dp"
-            app:cardCornerRadius="10dp"
-            app:cardElevation="4dp">
-
-            <LinearLayout
+            <!-- Estimated Time Card -->
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="16dp"
-                android:orientation="vertical"
-                android:padding="16dp">
+                android:layout_marginTop="12dp"
+                android:backgroundTint="#DCE1F6"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="4dp">
 
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="5dp"
-                    android:text="@string/order_update"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:orientation="vertical"
+                    android:padding="16dp">
 
-                <TextView
-                    android:id="@+id/status_preparing"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:padding="5dp"
-                    android:text="@string/order_being_prepared" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/estimated_time_of_delivery"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:padding="1dp" />
 
-                <TextView
-                    android:id="@+id/status_out_for_delivery"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:padding="5dp"
-                    android:text="@string/out_for_delivery" />
+                    <TextView
+                        android:id="@+id/delivery_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/_10_15_am"
+                        android:textColor="#666"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:padding="1dp"/>
 
-                <TextView
-                    android:id="@+id/status_delivered"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:padding="5dp"
-                    android:text="@string/delivered_to_classroom" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/thank_you_for_ordering_nwe_ve_received_your_order_and_we_re_on_it"
+                        android:padding="1dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
-        <!-- Order Details -->
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:backgroundTint="#DCE1F6"
-            android:padding="12dp"
-            app:cardCornerRadius="10dp"
-            app:cardElevation="4dp">
-
-            <LinearLayout
+            <!-- Order Update Card -->
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="16dp"
-                android:orientation="vertical"
-                android:padding="16dp">
+                android:layout_marginTop="12dp"
+                android:backgroundTint="#DCE1F6"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="4dp">
 
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="5dp"
-                    android:text="@string/order_details"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:orientation="vertical"
+                    android:padding="16dp">
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:padding="5dp"
-                    android:text="@string/room_312_south_campus" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/order_update"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:padding="1dp"/>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:padding="5dp"
-                    android:text="@string/please_message_once_you_re_outside_room_312_will_come_out_and_collect_nthank_you" />
+                    <TextView
+                        android:id="@+id/status_preparing"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/order_being_prepared"
+                        android:padding="1dp"/>
 
-                <Button
-                    android:id="@+id/btnUpdateStatus"
-                    android:layout_width="match_parent"
-                    android:layout_height="64dp"
-                    android:layout_marginTop="16dp"
-                    android:backgroundTint="#0C0C76"
-                    android:text="@string/update_order_status"
-                    android:textColor="@android:color/white" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:id="@+id/status_out_for_delivery"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/out_for_delivery"
+                        android:padding="1dp"/>
 
-    </LinearLayout>
-        </ScrollView>
+                    <TextView
+                        android:id="@+id/status_delivered"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/delivered_to_classroom"
+                        android:padding="1dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
-            <com.google.android.material.bottomnavigation.BottomNavigationView
-                android:id="@+id/bottomNavigationView"
+            <!-- Order Details Card -->
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#0C0C76"
-                app:itemIconSize="40dp"
-                app:itemIconTint="@color/white"
-                app:itemTextColor="#F2F0F0"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:menu="@menu/bottom_nav_menu" />
+                android:layout_marginTop="12dp"
+                android:backgroundTint="#DCE1F6"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="4dp">
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/order_details"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:padding="2dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/room_312_south_campus"
+                        android:padding="1dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/please_message_once_you_re_outside_room_312_will_come_out_and_collect_nthank_you"
+                        android:padding="1dp"/>
+
+                    <Button
+                        android:id="@+id/btnUpdateStatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="64dp"
+                        android:layout_marginTop="16dp"
+                        android:backgroundTint="#0C0C76"
+                        android:text="@string/update_order_status"
+                        android:textColor="@android:color/white"
+                        android:padding="1dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0C0C76"
+        app:itemIconSize="40dp"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="#F2F0F0"
+        app:menu="@menu/bottom_nav_menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

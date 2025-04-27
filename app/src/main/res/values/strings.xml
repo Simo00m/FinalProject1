@@ -13,11 +13,30 @@
     <string name="room_312_south_campus">Room 312 South campus</string>
     <string name="please_message_once_you_re_outside_room_312_will_come_out_and_collect_nthank_you">Please message once you\'re outside room 312 will come out and collect. Thank you.</string>
     <string name="update_order_status">Update Order Status</string>
-    <string name="email">E-mail</string>
-
     <string name="desc_background">Bow Valley College campus</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="login_error">Email or password is incorrect</string>
+    <string name="today_special_offer_nbuy_1_get_1_free">Today Special Offer!!!\nBuy 1 Get 1 Free</string>
+    <string name="order_id_12345">Order ID: #12345</string>
+    <string name="status_preparing">Status: Preparing</string>
+    <string name="estimated_delivery_in_12_minutes">Estimated delivery in 12 minutes</string>
+    <string name="order_summary">Order Summary:</string>
+    <string name="_1x_burger_1x_fries_1x_coke">1x Burger, 1x Fries, 1x Coke</string>
+    <string name="login">Login</string>
+    <string name="paypal">PayPal</string>
+    <string name="google_pay">Google Pay</string>
+    <string name="mastercard_0000">Mastercard ****0000</string>
+    <string name="add_payment_method">+ Add Payment Method</string>
+    <string name="subtotal_2_items_31_98">Subtotal (2 items) $ 31.98</string>
+    <string name="delivery_0_00">Delivery $ 0.00</string>
+    <string name="gst_1_50">GST % $ 1.50</string>
+    <string name="other_fees_0_00">Other Fees $ 0.00</string>
+    <string name="total_33_48">Total $ 33.48</string>
+    <string name="place_order">Place Order</string>
+    <string name="confirm_your_order">Confirm Your Order</string>
+    <string name="payment_method">Payment Method</string>
+    <string name="mastercard_000">Mastercard ****0000</string>
+    <string name="delivery_information">Delivery Information</string>
 
 </resources>
