@@ -27,7 +27,7 @@
     <string name="paypal">PayPal</string>
     <string name="google_pay">Google Pay</string>
     <string name="mastercard_0000">Mastercard ****0000</string>
-    <string name="add_payment_method">+ Add Payment Method</string>
+    <string name="add_payment_method">Add Payment Method</string>
     <string name="subtotal_2_items_31_98">Subtotal (2 items) $ 31.98</string>
     <string name="delivery_0_00">Delivery $ 0.00</string>
     <string name="gst_1_50">GST % $ 1.50</string>

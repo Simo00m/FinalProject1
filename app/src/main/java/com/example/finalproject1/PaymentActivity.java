@@ -44,7 +44,7 @@ public class PaymentActivity extends AppCompatActivity {
     }
 
     private void showAddPaymentDialog() {
-        Toast.makeText(this, "Add payment method functionality would go here", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Payment Added", Toast.LENGTH_SHORT).show();
     }
 
     private void processOrder() {

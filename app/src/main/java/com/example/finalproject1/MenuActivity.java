@@ -9,7 +9,7 @@ import android.widget.ScrollView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 
 public class MenuActivity extends AppCompatActivity {
 
@@ -78,17 +78,7 @@ public class MenuActivity extends AppCompatActivity {
         doughnutItem.setOnClickListener(openOrderUpdateListener);
         biryaniItem.setOnClickListener(openOrderUpdateListener);
 
-        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
 
-        bottomNavigationView.setOnItemSelectedListener(item -> {
-            if (item.getItemId() == R.id.home) {
-                Intent intent = new Intent(this, MenuActivity.class);
-                startActivity(intent);
-                finish(); // Optional but good: closes the current page
-                return true;
-            }
-            return false;
-        });
 
 
     }

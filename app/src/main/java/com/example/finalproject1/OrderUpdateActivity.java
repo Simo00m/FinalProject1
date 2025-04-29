@@ -7,7 +7,7 @@ import android.os.Looper;
 import android.widget.Button;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 
 public class OrderUpdateActivity extends AppCompatActivity {
 
@@ -41,17 +41,7 @@ public class OrderUpdateActivity extends AppCompatActivity {
 
         simulateOrderUpdates();
 
-        // Bottom Navigation
-        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
-        bottomNavigationView.setOnItemSelectedListener(item -> {
-            if (item.getItemId() == R.id.home) {
-                Intent intent = new Intent(OrderUpdateActivity.this, MenuActivity.class);
-                startActivity(intent);
-                finish();
-                return true;
-            }
-            return false;
-        });
+
     }
 
     private void updateStatus() {
