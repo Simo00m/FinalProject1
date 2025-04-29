@@ -13,7 +13,9 @@
         android:theme="@style/Theme.Finalproject1"
         tools:targetApi="31">
 
-        <activity android:name=".LoginActivity"
+        <!-- Login Activity is the launcher -->
+        <activity
+            android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,27 +23,12 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".MenuActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
-        <!-- I added this(Lekan) -->
-        <activity android:name=".OrderUpdateActivity"
-            android:exported="false" />
-
+        <activity android:name=".MenuActivity" android:exported="true" />
+        <activity android:name=".PaymentActivity" />
+        <activity android:name=".OrderUpdateActivity" />
         <activity android:name=".OrderTrackingActivity" />
-
-        <activity android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".ConfirmOrderActivity" />
+        <activity android:name=".MainActivity" /> <!-- Keep MainActivity if used internally, but REMOVE the launcher intent -->
 
     </application>
 

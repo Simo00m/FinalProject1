@@ -67,7 +67,7 @@ public class MenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Open OrderUpdateActivity WITHOUT passing extras
-                Intent intent = new Intent(MenuActivity.this, OrderUpdateActivity.class);
+                Intent intent = new Intent(MenuActivity.this, ConfirmOrderActivity.class);
                 startActivity(intent);
             }
         };

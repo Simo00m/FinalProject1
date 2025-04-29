@@ -1,45 +1,26 @@
 package com.example.finalproject1;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.Looper;
 import android.widget.Button;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
-import android.os.Handler;
-import android.content.Intent;
-
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-
 
 public class OrderUpdateActivity extends AppCompatActivity {
 
     private TextView deliveryTimeText, statusPreparing, statusOutForDelivery, statusDelivered;
     private Button updateStatusButton;
-
     private int orderStep = 0;
     private Handler handler = new Handler(Looper.getMainLooper());
-
     private boolean statusCompleted = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_orderupdate);
-
-        //This was added by Lekan
-
-        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
-
-        bottomNavigationView.setOnItemSelectedListener(item -> {
-            if (item.getItemId() == R.id.home) {
-                Intent intent = new Intent(OrderUpdateActivity.this, MenuActivity.class);
-                startActivity(intent);
-                finish();
-                return true;
-            }
-            return false;
-        });
-        //till here
 
         deliveryTimeText = findViewById(R.id.delivery_time);
         statusPreparing = findViewById(R.id.status_preparing);
@@ -49,18 +30,34 @@ public class OrderUpdateActivity extends AppCompatActivity {
 
         deliveryTimeText.setText("10:15 AM");
 
-        // Button Click Logic
-        updateStatusButton.setOnClickListener(v -> updateStatus());
+        updateStatusButton.setOnClickListener(v -> {
+            updateStatus();
+            if (statusCompleted) {
+                Intent intent = new Intent(OrderUpdateActivity.this, OrderTrackingActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
-        // Start Auto-Updates
         simulateOrderUpdates();
+
+        // Bottom Navigation
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        bottomNavigationView.setOnItemSelectedListener(item -> {
+            if (item.getItemId() == R.id.home) {
+                Intent intent = new Intent(OrderUpdateActivity.this, MenuActivity.class);
+                startActivity(intent);
+                finish();
+                return true;
+            }
+            return false;
+        });
     }
 
     private void updateStatus() {
         if (!statusCompleted) {
             orderStep++;
             updateStatusView();
-
             if (orderStep >= 3) {
                 statusCompleted = true;
                 updateStatusButton.setEnabled(false);
@@ -75,7 +72,6 @@ public class OrderUpdateActivity extends AppCompatActivity {
                 if (!statusCompleted) {
                     orderStep++;
                     updateStatusView();
-
                     if (orderStep < 3) {
                         handler.postDelayed(this, 7000);
                     } else {

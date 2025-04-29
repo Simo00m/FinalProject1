@@ -35,7 +35,7 @@
     <string name="total_33_48">Total $ 33.48</string>
     <string name="place_order">Place Order</string>
     <string name="confirm_your_order">Confirm Your Order</string>
-    <string name="payment_method">Payment Method</string>
+    <string name="payment_method">MasterCard</string>
     <string name="mastercard_000">Mastercard ****0000</string>
     <string name="delivery_information">Delivery Information</string>
 
